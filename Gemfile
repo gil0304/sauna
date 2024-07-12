@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 gem 'activerecord', '~> 6.1'
 gem 'bcrypt', '~> 3.1'
+gem 'cloudinary', '~> 1.18'
 gem 'dotenv', '~> 2.7'
 gem 'pg', '~> 1.2'
 gem 'rake', '~> 13.0'

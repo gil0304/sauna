@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :contents
   has_many :comments
-  has_many :contents, through: :comments
   
   validates :name, presence: true, uniqueness: true
   
@@ -19,7 +18,6 @@ end
 class Content < ActiveRecord::Base
   belongs_to :user
   has_many :comments
-  has_many :users, through: :comments
   
   validates :title, presence: true
   validates :body, presence: true

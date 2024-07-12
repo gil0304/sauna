@@ -1,12 +1,25 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>タイトル</title>
-</head>
-<body>
-  
-</body>
-</html>
+<div class="my-sauna">
+  <div class="header">
+    <h1>まいさうなぁ</h1>
+  </div>
+  <div class="contents">
+    <% @mycontents.each do |content| %>
+      <div class="card">
+        <a href="/content/<%= content.id %>">
+          <%= content.title %>
+          <img src="<%= content.img_url %>">
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div>
+  <% @contents.each do |content| %>
+    <a href="/content/<%= content.id %>">
+      <%= content.title %>
+      <img src="<%= content.img_url %>">
+    </a>
+  <% end %>
+</div>
+<a href="/new/content">新しい投稿</a>
